@@ -26,7 +26,7 @@ extension ViewController: UITextFieldDelegate {
 extension ViewController {
     
     func textFieldDelegateSelf() {
-        addMemoTextField.delegate = self
+//        addMemoTextField.delegate = self
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
