@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
    
+    @IBOutlet weak var addMemoTextField: UITextField!
     @IBOutlet weak var shoppingMemoTableView: UITableView!
     
     var shoppingMemo = ["cell1", "cell2", "cell3"]
@@ -16,6 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewDelegateSelf()
+        textFieldDelegateSelf()
         // Do any additional setup after loading the view.
     }
 
