@@ -8,12 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+   
+    @IBOutlet weak var shoppingMemoTableView: UITableView!
+    
+    var shoppingMemo = ["cell1", "cell2", "cell3"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableViewDelegateSelf()
         // Do any additional setup after loading the view.
     }
-
 
 }
 
