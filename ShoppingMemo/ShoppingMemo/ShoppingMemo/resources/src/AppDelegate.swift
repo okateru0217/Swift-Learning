@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  ShoppingMemo
 //
-//  Created by 岡澤輝明 on 2021/03/27.
+//  Created by 岡澤輝明 on 2021/03/28.
 //
 
 import UIKit
