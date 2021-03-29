@@ -12,14 +12,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var addMemoTextField: UITextField!
     @IBOutlet weak var shoppingMemoTableView: UITableView!
     
-    var shoppingMemo = ["cell1", "cell2", "cell3"]
+    var shoppingMemo = [String]()
+    let userDefaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        changeNavigationBarLook()
         tableViewDelegateSelf()
         textFieldDelegateSelf()
+        callShoppingMemoData()
         // Do any additional setup after loading the view.
+    }
+    
+    func changeNavigationBarLook() {
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.28, green: 0.53, blue: 0.75, alpha: 1.0)
+    }
+    
+    func callShoppingMemoData() {
+        if let storedTodoList = userDefaults.array(forKey: "shoppingMemo") as? [String] {
+            shoppingMemo.append(contentsOf: storedTodoList)
+        }
     }
 
 }
-

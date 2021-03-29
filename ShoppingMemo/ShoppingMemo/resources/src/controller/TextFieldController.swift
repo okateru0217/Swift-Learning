@@ -43,6 +43,7 @@ extension ViewController {
     func insertShoppingMemo() {
         shoppingMemo.insert(String(addMemoTextField.text!), at: 0)
         self.shoppingMemoTableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableView.RowAnimation.automatic)
+        self.userDefaults.set(self.shoppingMemo, forKey: "shoppingMemo")
         // textFieldを空にする
         addMemoTextField.text = ""
     }
