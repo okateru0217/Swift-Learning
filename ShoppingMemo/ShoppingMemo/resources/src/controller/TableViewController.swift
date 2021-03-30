@@ -31,6 +31,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.shoppingMemo.remove(at: indexPath.row)
         shoppingMemoTableView.deleteRows(at: [indexPath], with: .automatic)
+        userDefaults.set(shoppingMemo, forKey: "shoppingMemo")
     }
     
 }
